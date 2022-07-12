@@ -27,14 +27,14 @@ def RndNumber(len_num):
         rnd_num = RndNumber(1)
         return int(result[rnd_num:len_num + rnd_num])
 
-def ShuffleArr(array):
+# def ShuffleArr(array):
 
-    return array
+#     return array
 
 print(RndNumber(30))
-n = 10
-array = [0] * n
-for i in range(n):
-    array[i] = RndNumber(6)
+# n = 10
+# array = [0] * n
+# for i in range(n):
+#     array[i] = RndNumber(6)
 
-print(f"Исходный массив: \r\n {array}")
+# print(f"Исходный массив: \r\n {array}")
