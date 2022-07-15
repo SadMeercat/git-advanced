@@ -6,13 +6,10 @@
 # - 3 -> 11
 # - 2 -> 10
 
-from sqlalchemy import true
-
-
 def DecToBin(number):
     result = ""
 
-    while(true):
+    while(True):
         result += str(number % 2)
         number = number // 2
         
