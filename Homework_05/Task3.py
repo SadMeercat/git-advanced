@@ -13,3 +13,28 @@
 # Порядковые номера смотрите в этой таблице, в третьем столбце: https://www.charset.org/utf-8
 # Это — 16-ричная система, поищите, как правильнее и быстрее получать эти символы. 
 # С помощью reduce сложите получившиеся числа и верните из функции в качестве ответа.
+
+def FirstFunc(langs, nums):
+    for i in range(len(langs)):
+        langs[i] = langs[i].upper()
+    return list(zip(nums, langs))
+def SecFunc(inpt_list: list):
+    result_list = []
+    for i in inpt_list:
+        summ = 0
+        word = i[1]
+        for letter in word:
+            hex_code = ord(letter)
+            summ += int(hex_code)
+        if summ % i[0] == 0:
+            result_list.append((summ, i[1]))
+    return result_list
+
+languages = ["python", "c#", "java", "pascal", "php"]
+numbers = [i for i in range(1, len(languages) + 1)]
+
+my_first_list = FirstFunc(languages, numbers)
+
+print(f"Вывод первой функции:\r\n{my_first_list}")
+
+print(SecFunc(my_first_list))
