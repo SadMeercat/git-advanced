@@ -6,3 +6,10 @@
 # список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 # список: [], ищем: "123", ответ: -1
 
+list_string = ["qwe", "asd", "zxc", "qwe", "ertqwe"]# ищем: "qwe", ответ: 3
+find_obj = "qwe"
+
+list_string = list(enumerate(list_string))
+
+new_list = list(filter(lambda x: x[1] == "qwe", list_string))
+print(f"Ищем {find_obj}, ответ: {new_list[1][0]}")
